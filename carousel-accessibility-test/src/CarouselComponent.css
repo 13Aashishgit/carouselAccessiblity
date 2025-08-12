@@ -1,0 +1,188 @@
+/* Main wrapper for the entire carousel */
+.my-carousel-wrapper {
+  max-width: 850px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* Navigation buttons container */
+.carousel-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.nav-button {
+  padding: 10px 28px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.nav-button:focus {
+  outline: 2px solid #ff6b35;
+  outline-offset: 2px;
+}
+
+/* Container for the slideshow */
+.slideshow-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+/* Individual slide styling */
+.individual-slide {
+  position: relative;
+  height: 400px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text content overlay */
+.slide-text-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.82) 60%, rgba(0,0,0,0.25) 100%);
+  color: #fff;
+  padding: 28px 20px 18px 20px;
+  text-align: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.slide-heading {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.slide-text {
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Custom slide indicators */
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 12px;
+}
+
+.indicator-label {
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.indicator-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.indicator-dot:hover {
+  border-color: #007bff;
+  background-color: #e3f2fd;
+}
+
+.indicator-dot.active-indicator {
+  border-color: #ff6b35;
+  background-color: #fff3e0;
+  color: #ff6b35;
+  font-weight: bold;
+  box-shadow: 0 0 8px #ff6b35;
+  transform: scale(1.08);
+}
+
+/* Pause/Play button style */
+.pause-play-button {
+  background-color: #ff6b35;
+  color: white;
+  margin: 0 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.pause-play-button:hover,
+.pause-play-button:focus {
+  background-color: #d35400;
+  outline: 2px solid #007bff;
+}
+
+.indicator-dot:focus {
+  outline: 2px solid #ff6b35;
+  outline-offset: 2px;
+}
+
+/* Slide counter */
+.slide-counter {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .my-carousel-wrapper {
+    padding: 12px 2px;
+    max-width: 99vw;
+  }
+  .individual-slide {
+    height: 220px;
+  }
+  .slide-heading {
+    font-size: 18px;
+  }
+  .slide-text {
+    font-size: 13px;
+  }
+  .slide-indicators {
+    gap: 6px;
+  }
+  .indicator-dot {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
